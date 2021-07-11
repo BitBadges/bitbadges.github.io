@@ -22,18 +22,18 @@ doks:
     footer:
         content:
             logo:
-                text: Project name
+                text: BitBadges
                 image:
-            copyright: Copyright &copy; 2017. - Project name <br>All rights reserved.
+            copyright: Copyright &copy; 2021. - BitBadges <br>All rights reserved.
         social_list:
             - network_name: facebook
-              profile_url: '#'
+              profile_url: 'https://www.facebook.com/hashtag/BitBadges'
             - network_name: twitter
-              profile_url: '#'
+              profile_url: 'https://twitter.com/hashtag/BitBadges?src=hashtag_click'
             - network_name: instagram
-              profile_url: '#'
+              profile_url: 'https://www.instagram.com/explore/tags/BitBadges'
             - network_name: youtube
-              profile_url: '#'
+              profile_url: 'https://www.youtube.com/results?search_query=BitBadges'
     comments:
         disqus_forum_shortname: # Add your disqus forum shortname to activate comments
 
