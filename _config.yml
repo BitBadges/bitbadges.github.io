@@ -8,17 +8,17 @@ doks:
             image:
         nav:
             - item_name: About
-              item_url: '#'
+              item_url: 'https://bitbadges.github.io/about'
             - item_name: Vision
-              item_url: '#'
+              item_url: 'https://bitbadges.github.io/vision'
             - item_name: Usecases
-              item_url: '#'
+              item_url: 'https://bitbadges.github.io/usecases'
             - item_name: Database Schema
-              item_url: '#'
+              item_url: 'https://bitbadges.github.io/database'
             - item_name: The Repositories
-              item_url: '#'
+              item_url: 'https://bitbadges.github.io/codebase'
             - item_name: API Documentation
-              item_url: '#'              
+              item_url: 'https://bitbadges.github.io/api'              
     footer:
         content:
             logo:
