@@ -33,13 +33,13 @@ BitBadges is an open source, community driven platform where BitClout users can 
 ## Our Goal
 BitBadges aims to help tie together social identity and NFT ownership on the internet through BitClout and the use of blockchain technology. We want to give a platform to creators and individuals that allows them to go peer to peer with any service they wish to offer. 
 
-URL: bitbadges.web.app
+URL: [bitbadges.web.app](https://bitbadges.web.app/)
 
 ## Laying the Foundation
 We aim to provide the foundation upon which any developer can build any innovation they wish. Like BitClout laid the foundation by providing public access to data like posts, messages, transactions, etc, BitBadges lays the foundation by providing public access to badges. We offer a public API with access to all data for all badges so anyone can build whatever they wish on top of our ecosystem.
 We are a completely open source and community driven project. BitBadges will not be run as a company, just code. Those who contribute and innovate within our ecosystem will be rewarded with the official BitBadges account creator coins.
 
-Join the discord at: discord.gg/Hc9eU73S
+Join the discord at: [discord.gg/TJMaEd9bar](discord.gg/TJMaEd9bar)
 
 ## Badges
 There are three main parts to BitBadges: issuing badges to others, advertising your badges, and showcasing the badges you have earned!
