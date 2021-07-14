@@ -4,15 +4,15 @@ layout: homepage
 keywords:
 
 # Hero section
-title: Project name
-description: Project description
+title: BitBadges
+description: BitBadges allows users to issue NFT badges to other users!
 buttons:
-    - content: Button
-      url: '#'
-      external_url: false
+    - content: Profile
+      url: 'https://bitclout.com/u/BitBadges'
+      external_url: true
     - icon: github
-      content: Button with icon
-      url: '#'
+      content: Code
+      url: 'https://github.com/BitBadges'
       external_url: true
 
 # Author box
