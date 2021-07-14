@@ -28,7 +28,7 @@ page_nav:
         url: 'https://bitbadges.github.io/api/'
 ---
 # Codebase
-Currently working on cleaning up the codebase, but here are the links to the repositories
+Currently, we are working on cleaning up the codebase but here are links to the repositories
 
 **Front End:** https://github.com/BitBadges/bitbadgesreactfrontend  
 **Back End:** https://github.com/BitBadges/bitbadgesbackend  
