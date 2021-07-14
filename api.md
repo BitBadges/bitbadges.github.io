@@ -27,3 +27,32 @@ page_nav:
         content: Next page
         url: 'https://bitbadges.github.io'
 ---
+
+# API Documentation
+
+`Get` **Get User**  
+`https://us-central1-bitbadges.cloudfunctions.net/api/users/:id`  
+Gets all the user's data  
+***Request:*** `id` string `BitClout Username`  
+***Response:***
+> 200 (OK):
+``` JavaScript
+{
+    badgesIssued: [string],
+    badgesReceived: [string],
+    badgesCreated: [string],
+    portfolioPages: [
+        {
+            pageNum: Number,
+            pageTitle: string,
+            badges: [string]
+        }
+    ]
+}
+```
+> 400 (Bad Request)
+``` JavaScript
+{
+    general: error message string
+}
+```
