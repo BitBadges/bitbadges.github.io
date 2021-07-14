@@ -56,3 +56,51 @@ Gets all the user's data
     general: error message string
 }
 ```
+`Get` **Get Badge**  
+`https://us-central1-bitbadges.cloudfunctions.net/api/badgePages/:id`  
+***Request:*** `id` string `Badge Page ID`  
+***Response:***
+> 200 (OK):
+```JavaScript
+{
+    backgroundColor: string, //Valid HTML color name or hex string
+    description: string,
+    externalUrl: string,
+    id: string, //IPFS hash
+    imageUrl: string,
+    issuer: string, //BitClout public key
+    title: string,
+    preReqs: string, //what it takes to earn the badge
+    validity: string //explain how long the badge lasts
+}
+```
+> 400 (Bad Request)
+```JavaScript
+{
+    general: error message string
+}
+```
+**Get All Badges**  
+All badge hashes are posted on the [@BitBadgesHash](https://bitclout.com/u/BitBadgesHash) account, so you will interact w/ the BitClout backend API to get the full list of hashes.
+
+*Note:* All badges are permanent and won't change, so consider storing them locally instead of adding stress to our API and database.
+
+`Get` **Get All Badge Pages**  
+`https://us-central1-bitbadges.cloudfunctions.net/api/badgePages`  
+**Response**
+> 200 (OK):
+```JavaScript
+[
+    {
+        backgroundColor: string, //Valid HTML color name or hex string
+        description: string,
+        externalUrl: string,
+        id: string, //IPFS hash
+        imageUrl: string,
+        issuer: string, //BitClout public key
+        title: string,
+        preReqs: string, //what it takes to earn the badge
+        validity: string //explain how long the badge lasts
+    }
+]
+```
