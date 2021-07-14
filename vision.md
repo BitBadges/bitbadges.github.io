@@ -32,12 +32,12 @@ page_nav:
 This page outlines some of the current features we are currently working on and planning to work on in the near future! This page will be updated occasionally.
 
 ## Open Source
-This project is open source, so if you would like to help with any of the features below, please do. Compensation will be awarded in the form of BitBadges creator coin or BitClout. Join the discord at discord.gg/Hc9eU73S to discuss!
+This project is open source, so if you would like to help with any of the features below, please do. Compensation will be awarded in the form of BitBadges creator coin or BitClout. Join the discord at [discord.gg/TJMaEd9bar](discord.gg/TJMaEd9bar) to discuss!
 
 ## Currently Working On
-Integrate BitBadges into @cloutfeed once it goes open source
-Growing the community and partnering with other community projects
-Improving UI and Usability
+- Integrate BitBadges into [@cloutfeed](https://bitclout.com/u/cloutfeed)
+- Improving the  UI, UX and ease of use
+- Growing the community and expanding partnerships
 
 ## Plans for the Future
 Possibly getting it integrated into profiles on @cloutfeed or a similar open source feed.
