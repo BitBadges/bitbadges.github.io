@@ -89,7 +89,7 @@ All badge hashes are posted on the [@BitBadgesHash](https://bitclout.com/u/BitBa
 
 `Get` **Get All Badge Pages**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/badgePages`  
-**Response**
+***Response***
 > 200 (OK):
 ```JavaScript
 [
@@ -111,7 +111,22 @@ All badge hashes are posted on the [@BitBadgesHash](https://bitclout.com/u/BitBa
 `https://us-central1-bitbadges.cloudfunctions.net/api/username/:publickey`  
 Gets a user's profile data from the BitClout chain by specifying the public key. Done to bypass CORS policy.  
 ***Request:*** `publicKey` string `BitClout public key`  
-**Response**  
+***Response***  
+> 200 (OK):
+```JavaScript
+{
+    Profile: {
+        Username: string,
+        PublicKeyBase58Check: string
+    }
+}
+```
+
+`Get` **Get Public Key**  
+`https://us-central1-bitbadges.cloudfunctions.net/api/publicKey/:username`  
+Gets a user's profile data from the BitClout chain by specifying the public key. Done to bypass CORS policy.  
+***Request:*** `username` string `username for the user`  
+***Response***  
 > 200 (OK):
 ```JavaScript
 {
