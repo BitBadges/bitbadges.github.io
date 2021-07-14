@@ -28,17 +28,16 @@ page_nav:
         url: 'https://bitbadges.github.io/database/'
 ---
 
-Potential Use Cases
+# Potential Use Cases
 Because you can create a badge for anything, there are infinitely many possible use cases for BitBadges!
 
-Potential Use Cases
-BitClout Official Badges - Some official BitClout account can give out badges like a rug pulled badge that is displayed on your account if you pump and dump, verified badges, etc.
-Memberships/Subscriptions/Access Tokens - Badges have optional start and end dates, so you can offer a limited time membership for anything from a gym membership to a Spotify subscription. Proof of ownership is easily done through our public API.
-Premium Content - Any creator who wishes to offer premium content can do so through badges.
-Recognition of Achievement or Completion - Job certifications, awards, athletic accomplishments, etc.
-Peer to Peer University - Professors can offer their courses directly peer to peer with any method of their choosing and offer a certificate of completion badge. This way, teachers can finally get the compensation they deserve as they can directly benefit from the monetization of BitClout.
-Government Issued Tokens - Trusted centralized parties like the government can issue badges for anything like vaccinations or felonies.
-University Diplomas - Universities can offer diplomas to students as a badge.
-Publications - Verify you are the author of a publication
-Smart contracts may eventually be used to issue badges which eliminates the need for trust between a creator and an individual.
-Can even be used to issue something bad like a felony badge or an honor code violation
+## Potential Use Cases
+- **BitClout Official Badges** - Some official BitClout account can give out badges like a rug pulled badge that is displayed on your account if you pump and dump, verified badges, etc.
+- **Memberships/Subscriptions/Access Tokens** - Badges have optional start and end dates, so you can offer a limited time membership for anything from a gym membership to a Spotify subscription. Proof of ownership is easily done through our public API.
+- **Premium Content** - Any creator who wishes to offer premium content can do so through badges.
+- **Recognition of Achievement or Completion** - Job certifications, awards, athletic accomplishments, etc.
+- **Peer to Peer University** - Professors can offer their courses directly peer to peer with any method of their choosing and offer a certificate of completion badge. This way, teachers can finally get the compensation they deserve as they can directly benefit from the monetization of BitClout.
+- **Government Issued Tokens** - Trusted centralized parties like the government can issue badges for anything like vaccinations or felonies.
+- **University Diplomas** - Universities can offer diplomas to students as a badge.
+- **Publications** - Verify you are the author of a publication
+- **Smart contracts** may eventually be used to issue badges which eliminates the need for trust between a creator and an individual.
