@@ -33,7 +33,7 @@ There are three things stored in the BitBadges database: badges, badgePages, and
 
 ## Database Schema
 **Badges**
-```JavaScript
+```javascript
 {
     backgroundColor: string, //Valid HTML color name or hex string
     dateCreated: Number, //number of seconds since UNIX epoch
@@ -50,7 +50,7 @@ There are three things stored in the BitBadges database: badges, badgePages, and
 }
 ```
 **Badge Pages (Ads)**
-```JavaScript
+```javascript
 {
     backgroundColor: string, //Valid HTML color name or hex string
     description: string,
@@ -64,7 +64,7 @@ There are three things stored in the BitBadges database: badges, badgePages, and
 }
 ```
 **Users**
-```JavaScript
+```javascript
 {
     badgesCreated: string array, //ids of badge pages or ads created
     badgesIssued: string array, //ids of badges given out
@@ -73,7 +73,7 @@ There are three things stored in the BitBadges database: badges, badgePages, and
 }
 ```
 *Portfolio page object:*
-```JavaScript
+```javascript
 {
     badges: string array, //ids of badges on the given page
     pageTitle: string,
