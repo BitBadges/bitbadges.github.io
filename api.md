@@ -36,10 +36,7 @@ Gets all the user's data
 ***Request:*** `id` string `BitClout Username`  
 ***Response:***
 > 200 (OK):
-<div class="example">
-    <a href="#" target="blank">Preview</a>
-</div>
-``` JavaScript
+```JavaScript
 {
     badgesIssued: [string],
     badgesReceived: [string],
@@ -54,10 +51,7 @@ Gets all the user's data
 }
 ```
 > 400 (Bad Request)
-<div class="example">
-    <a href="#" target="blank">Preview</a>
-</div>
-``` JavaScript
+```JavaScript
 {
     general: error message string
 }
