@@ -36,7 +36,7 @@ Gets all the user's data
 ***Request:*** `id` string `BitClout Username`  
 ***Response:***
 > 200 (OK):
-```JavaScript
+```javascript
 {
     badgesIssued: [string],
     badgesReceived: [string],
@@ -51,7 +51,7 @@ Gets all the user's data
 }
 ```
 > 400 (Bad Request)
-```JavaScript
+```javascript
 {
     general: error message string
 }
@@ -62,7 +62,7 @@ Gets all the user's data
 ***Request:*** `id` string `Badge Page ID`  
 ***Response:***
 > 200 (OK):
-```JavaScript
+```javascript
 {
     backgroundColor: string, //Valid HTML color name or hex string
     description: string,
@@ -76,7 +76,7 @@ Gets all the user's data
 }
 ```
 > 400 (Bad Request)
-```JavaScript
+```javascript
 {
     general: error message string
 }
@@ -91,7 +91,7 @@ All badge hashes are posted on the [@BitBadgesHash](https://bitclout.com/u/BitBa
 `https://us-central1-bitbadges.cloudfunctions.net/api/badgePages`  
 ***Response***
 > 200 (OK):
-```JavaScript
+```javascript
 [
     {
         backgroundColor: string, //Valid HTML color name or hex string
@@ -113,7 +113,7 @@ Gets a user's profile data from the BitClout chain by specifying the public key.
 ***Request:*** `publicKey` string `BitClout public key`  
 ***Response***  
 > 200 (OK):
-```JavaScript
+```javascript
 {
     Profile: {
         Username: string,
@@ -128,7 +128,7 @@ Gets a user's profile data from the BitClout chain by specifying the public key.
 ***Request:*** `username` string `username for the user`  
 ***Response***  
 > 200 (OK):
-```JavaScript
+```javascript
 {
     Profile: {
         Username: string,
