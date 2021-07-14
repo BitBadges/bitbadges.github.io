@@ -56,6 +56,7 @@ Gets all the user's data
     general: error message string
 }
 ```
+
 `Get` **Get Badge**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/badgePages/:id`  
 ***Request:*** `id` string `Badge Page ID`  
@@ -80,6 +81,7 @@ Gets all the user's data
     general: error message string
 }
 ```
+
 **Get All Badges**  
 All badge hashes are posted on the [@BitBadgesHash](https://bitclout.com/u/BitBadgesHash) account, so you will interact w/ the BitClout backend API to get the full list of hashes.
 
@@ -103,4 +105,19 @@ All badge hashes are posted on the [@BitBadgesHash](https://bitclout.com/u/BitBa
         validity: string //explain how long the badge lasts
     }
 ]
+```
+
+`Get` **Get Username**  
+`https://us-central1-bitbadges.cloudfunctions.net/api/username/:publickey`  
+Gets a user's profile data from the BitClout chain by specifying the public key. Done to bypass CORS policy.  
+***Request:*** `publicKey` string `BitClout public key`  
+**Response**  
+> 200 (OK):
+```JavaScript
+{
+    Profile: {
+        Username: string,
+        PublicKeyBase58Check: string
+    }
+}
 ```
