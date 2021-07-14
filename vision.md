@@ -40,15 +40,15 @@ This project is open source, so if you would like to help with any of the featur
 - Growing the community and expanding partnerships
 
 ## Plans for the Future
-- Possibly getting it integrated into profiles on @cloutfeed.
+- Possibly getting it integrated into profiles on [@cloutfeed](https://bitclout.com/u/cloutfeed).
 - Payment options and auctions to allow creators to sell their badges for BitClout or other currencies
 - More support for hosting content within the BitBadges website
     - Ex: Having BitBadges as the place where you actually host your course instead of hosting it externally
     - Potentially partner with other BitClout projects working with premium content
-- Explore possibilities of getting badges integrated on the BitClout chain itself instead of using @BitBadgesHash and posting the hashes
+- Explore possibilities of getting badges integrated on the BitClout chain itself instead of using [@BitBadgesHash](https://bitclout.com/u/BitBadgesHash) and posting the hashes
     - Can be stored just how a post or a message would be with a sender, recipient, image, description, etc
 - Working to integrate other methods of issuing badges besides manually by the issuer
     - Through claiming - submitting a claim for a badge and then issuer can approve/deny the issuance of the badge
-- Explore possibility of creating NFT accounts that set Founder Reward to 100%, buy 1 coin and distribute it to the purchaser. 
-- Its a stretch, but possible integration with @CloutContracts as an interoperable sidechain for badge issuing.
+- Explore possibility of creating NFT accounts that set FR to 100%, buy 1 coin and distribute it to the purchaser. 
+- Its a stretch, but possible integration with [@CloutContracts](https://cloutcontracts.net/) as an interoperable sidechain for badge issuing.
 - Support for transferring the ownership of badges
