@@ -54,6 +54,9 @@ Gets all the user's data
 }
 ```
 > 400 (Bad Request)
+<div class="example">
+    <a href="#" target="blank">Preview</a>
+</div>
 ``` JavaScript
 {
     general: error message string
