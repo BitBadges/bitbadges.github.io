@@ -3,7 +3,7 @@ doks:
     baseurl:
     color_theme: purple # Available themes: blue (default), green, purple, red and yellow
     header:
-        logo: BB_Logo_MINI.png
+        logo: https://bitbadges.github.io/BB_Logo_MINI.png
             text: BitBadges
             image:
         nav:
