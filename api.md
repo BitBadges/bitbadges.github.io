@@ -6,7 +6,7 @@ comments: false
 
 # Hero section
 title: API Documentation
-description: Information about ...
+description: Here you will find information about the BitBadges API and the various get/post methods
 
 # Author box
 author:
