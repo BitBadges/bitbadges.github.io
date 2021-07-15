@@ -32,6 +32,6 @@ page_nav:
 
 Currently, we are working on cleaning up the codebase but here are links to the repositories
 
-**Front End:** https://github.com/BitBadges/bitbadgesreactfrontend  
-**Back End:** https://github.com/BitBadges/bitbadgesbackend  
-**Mobile App:** https://github.com/CloutFeed/mobileApp/pull/105
+**Front End:** [https://github.com/BitBadges/bitbadgesreactfrontend](https://github.com/BitBadges/bitbadgesreactfrontend)  
+**Back End:** [https://github.com/BitBadges/bitbadgesbackend](https://github.com/BitBadges/bitbadgesbackend)  
+**Mobile App:** [https://github.com/CloutFeed/mobileApp/pull/105](https://github.com/CloutFeed/mobileApp/pull/105)
