@@ -30,7 +30,7 @@ page_nav:
 
 # API Documentation
 
-`Get` **Get User**  
+`GET` **Get User**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/users/:id`  
 Gets all the user's data  
 ***Request:*** `id` string `BitClout Username`  
@@ -57,7 +57,7 @@ Gets all the user's data
 }
 ```
 
-`Get` **Get Badge**  
+`GET` **Get Badge**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/badgePages/:id`  
 ***Request:*** `id` string `Badge Page ID`  
 ***Response:***
@@ -87,7 +87,7 @@ All badge hashes are posted on the [@BitBadgesHash](https://bitclout.com/u/BitBa
 
 *Note:* All badges are permanent and won't change, so consider storing them locally instead of adding stress to our API and database.
 
-`Get` **Get All Badge Pages**  
+`GET` **Get All Badge Pages**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/badgePages`  
 ***Response***
 > 200 (OK):
@@ -107,7 +107,7 @@ All badge hashes are posted on the [@BitBadgesHash](https://bitclout.com/u/BitBa
 ]
 ```
 
-`Get` **Get Username**  
+`GET` **Get Username**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/username/:publickey`  
 Gets a user's profile data from the BitClout chain by specifying the public key. Done to bypass CORS policy.  
 ***Request:*** `publicKey` string `BitClout public key`  
@@ -122,7 +122,7 @@ Gets a user's profile data from the BitClout chain by specifying the public key.
 }
 ```
 
-`Get` **Get Public Key**  
+`GET` **Get Public Key**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/publicKey/:username`  
 Gets a user's profile data from the BitClout chain by specifying the public key. Done to bypass CORS policy.  
 ***Request:*** `username` string `username for the user`  
@@ -137,7 +137,7 @@ Gets a user's profile data from the BitClout chain by specifying the public key.
 }
 ```
 
-`Post` **Create Badge**  
+`POST` **Create Badge**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/badges`  
 Creates a badge by uploading to IPFS, adding the hash id to respective user's badgesIssues and badgesReceived array in our database, and posts hash to [@BitBadgesHash](https://bitclout.com/u/BitBadgesHash). User must own 0.05 BitBadges coin to issue a badge.
 
@@ -175,7 +175,7 @@ Creates a badge by uploading to IPFS, adding the hash id to respective user's ba
 }
 ```
 
-`Delete` **Delete Badge Page (Ad)**  
+`DELETE` **Delete Badge Page (Ad)**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/badgePages/:id`  
 Deletes badge page (ad) and removes value from user badgesCreated array  
 ***Request:***  
@@ -196,7 +196,7 @@ Deletes badge page (ad) and removes value from user badgesCreated array
 }
 ```
 
-`Post` **Create Profile Page**  
+`POST` **Create Profile Page**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/users/portfolioPages`  
 Adds a profile page at location pageNum and shifts all other pages greater or equal up one location.  
 `description` string `description of current page; defaults to empty string if none provided`  
@@ -218,5 +218,24 @@ Adds a profile page at location pageNum and shifts all other pages greater or eq
 ```javascript
 {
     general: "error message"
+}
+```
+
+`DELETE` **Delete Profile Page**  
+`https://us-central1-bitbadges.cloudfunctions.net/api/users/portfolioPages`  
+`pageNum` number `page location to be deleted`  
+`publickey` string `Public key of issuer; note the lowercase k`  
+`jwt` string `jwt token obtained from BitClout identity that corresponds with publickey`  
+***Response***  
+> 200 (OK):
+```javascript
+{
+    general: "Success message"
+}
+```
+> 400 (Bad Request)
+```javascript
+{
+    general: "Error message"
 }
 ```
