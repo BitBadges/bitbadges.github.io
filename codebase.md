@@ -6,7 +6,7 @@ comments: false
 
 # Hero section
 title: The Repositories
-description: Information about ...
+description: Currently, we are working on cleaning up the codebase but here are links to the repositories
 
 # Author box
 author:
