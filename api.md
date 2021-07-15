@@ -173,3 +173,24 @@ Creates a badge by uploading to IPFS, adding the hash id to respective user's ba
     validDates: boolean //true if start/end dates, false if not
 }
 ```
+`Delete` **Delete Badge Page (Ad)**  
+`https://us-central1-bitbadges.cloudfunctions.net/api/badgePages/:id`  
+Deletes badge page (ad) and removes value from user badgesCreated array  
+***Request:***  
+`id` string `ID of badge page to be deleted`  
+`publickey` string `Public key of issuer; note the lowercase k`  
+`jwt` string `jwt token obtained from BitClout identity that corresponds with publickey`   
+***Response***  
+> 200 (OK):
+```javascript
+{
+    general: "Success message"
+}
+```
+> 400 (Bad Request)
+```javascript
+{
+    general: "Error message"
+}
+```
+
