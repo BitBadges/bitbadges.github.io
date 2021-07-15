@@ -6,7 +6,7 @@ comments: false
 
 # Hero section
 title: Database Schema
-description: Information about ...
+description: There are three things stored in the BitBadges database - badges, badgePages, and users
 
 # Author box
 author:
