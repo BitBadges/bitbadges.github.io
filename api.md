@@ -33,9 +33,9 @@ page_nav:
 `GET` **Get User**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/users/:id`  
 Gets all user's data  
-**_Request Params:_**
+> **_Request Params:_**
 `id` string `User's BitClout Public Key`
-**_Response:_**
+> **_Response:_**
 
 > 200 (OK):
 
