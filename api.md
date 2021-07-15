@@ -65,9 +65,9 @@ _Note:_ All badges are permanent and won't change, so consider caching or storin
 
 `GET` **Get Badge**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/badge/:id`  
-Gets badge data for a specific badge ID
+Gets badge data for a specific badge ID  
 **_Request Params:_** `id` string `Badge ID`  
-**_Response:_**
+**_Response:_**  
 
 > 200 (OK):
 
@@ -96,10 +96,10 @@ Gets badge data for a specific badge ID
 
 `POST` **Get Badges**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/badges`  
-Gets all data for badges specified
-**_Request Body:_**
-`badgeIds` string[] `Array of badge ids to get`
-**_Response:_**
+Gets all data for badges specified  
+**_Request Body:_**  
+`badgeIds` string[] `Array of badge ids to get`  
+**_Response:_**  
 
 > 200 (OK):
 
@@ -130,9 +130,9 @@ Gets all data for badges specified
 
 `POST` **Create Badge**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/badge`  
-Creates a badge by uploading to IPFS, adding the hash id to respective user's badgesIssued and badgesPending array in our database, and posts hash to [@BitBadgesHash](https://bitclout.com/u/BitBadgesHash). First 25 recipients are free. After that it costs 0.005 $CLOUT per recipient (subject to change).
+Creates a badge by uploading to IPFS, adding the hash id to respective user's badgesIssued and badgesPending array in our database, and posts hash to [@BitBadgesHash](https://bitclout.com/u/BitBadgesHash). First 25 recipients are free. After that it costs 0.005 $CLOUT per recipient (subject to change).  
 
-**The recipients array must be valid public keys, no usernames should be entered here. This method does not a) check for if a public key exists or b) convert usernames to public key. Every element in the recipients array will be treated as a valid public key and badges will be issued to each one.**
+**The recipients array must be valid public keys, no usernames should be entered here. This method does not a) check for if a public key exists or b) convert usernames to public key. Every element in the recipients array will be treated as a valid public key and badges will be issued to each one.**  
 
 **_Request Body:_**  
 `title` string `Badge title. Required.`  
@@ -147,10 +147,10 @@ Creates a badge by uploading to IPFS, adding the hash id to respective user's ba
 `issuer` string `Required`  
 `jwt` string `jwt token obtained from BitClout identity that corresponds with publickey`  
 `publickey` string `Public key of issuer; note the lowercase k`  
-`signedTransactionHex` – string – `Required if twenty six or more recipients. Signed transaction hex of a send bitclout transaction from BitClout Identity that is sending at least 0.005 $CLOUT per recipient starting with the sixth one to the @BitBadges account on BitClout. See /getFeeTxn for more details on how to do this. Note: Hex must be already signed when inputted. For details on how to get it signed, visit the BitClout Identity API docs. We strongly recommend against using access level 4 for your app.`
-`amountNanos` – number – `Required if twenty six or more recipients. Number of nanos in the transaction specified by the signedTransactionHex; 10^9 nanos equals one $CLOUT`
+`signedTransactionHex` – string – `Required if twenty six or more recipients. Signed transaction hex of a send bitclout transaction from BitClout Identity that is sending at least 0.005 $CLOUT per recipient starting with the sixth one to the @BitBadges account on BitClout. See /getFeeTxn for more details on how to do this. Note: Hex must be already signed when inputted. For details on how to get it signed, visit the BitClout Identity API docs. We strongly recommend against using access level 4 for your app.`  
+`amountNanos` – number – `Required if twenty six or more recipients. Number of nanos in the transaction specified by the signedTransactionHex; 10^9 nanos equals one $CLOUT`  
 
-**_Response_**
+**_Response_**  
 
 > 200 (OK):
 
@@ -178,17 +178,17 @@ Creates a badge by uploading to IPFS, adding the hash id to respective user's ba
 ```
 
 `GET` **Get Fee Transaction**  
-`https://us-central1-bitbadges.cloudfunctions.net/api/feeTxn/:senderKey/:numRecipients`
+`https://us-central1-bitbadges.cloudfunctions.net/api/feeTxn/:senderKey/:numRecipients`  
 
-Creates a “send-bitclout” transaction using the BitClout backend API with the minimum amount of $CLOUT transferred to @BitBadges in order to issue the badge with specified number of recipients. Current pricing is 0.005 $CLOUT starting with the sixth recipient. First five are free. If numRecipients is less than five, it will still create a transaction that sends 0 $CLOUT to @BitBadges. All pricing listed above does not include network fees.
+Creates a “send-bitclout” transaction using the BitClout backend API with the minimum amount of $CLOUT transferred to @BitBadges in order to issue the badge with specified number of recipients. Current pricing is 0.005 $CLOUT starting with the sixth recipient. First five are free. If numRecipients is less than five, it will still create a transaction that sends 0 $CLOUT to @BitBadges. All pricing listed above does not include network fees.  
 
-Once you obtain TransactionHex from this transaction, you must get it signed using BitClout Identity before you input it into the create badge method. For details on how to get it signed, visit the BitClout Identity API docs. We strongly recommend against using access level 4 for your app.
+Once you obtain TransactionHex from this transaction, you must get it signed using BitClout Identity before you input it into the create badge method. For details on how to get it signed, visit the BitClout Identity API docs. We strongly recommend against using access level 4 for your app.  
 
-**_Request Params:_**
-`senderKey`: string - `public key of account that is sending the $CLOUT to @BitBadges`
-`numRecipients`: string – `number of recipients of badge to be issued`
+**_Request Params:_**  
+`senderKey`: string - `public key of account that is sending the $CLOUT to @BitBadges`  
+`numRecipients`: string – `number of recipients of badge to be issued`  
 
-**_Response:_**
+**_Response:_**  
 
 > 200 (OK):
 
@@ -201,12 +201,12 @@ Once you obtain TransactionHex from this transaction, you must get it signed usi
 
 `POST` **Accept Badge**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/acceptBadge`  
-Accepts a badges by moving it from badgesPending to badgesAccepted
-**_Request Body:_**
-`badgeId` string `Badge Id to accept`
+Accepts a badges by moving it from badgesPending to badgesAccepted  
+**_Request Body:_**  
+`badgeId` string `Badge Id to accept`  
 `jwt` string `jwt token obtained from BitClout identity that corresponds with publickey`  
 `publickey` string `Public key of issuer; note the lowercase k`  
-**_Response:_**
+**_Response:_**  
 
 > 200 (OK):
 
@@ -218,12 +218,12 @@ Accepts a badges by moving it from badgesPending to badgesAccepted
 
 `POST` **Decline Badge**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/declineBadge`  
-Declines a badge by removing it from badgesPending
-**_Request Body:_**
-`badgeId` string `Badge Id to decline`
+Declines a badge by removing it from badgesPending  
+**_Request Body:_**  
+`badgeId` string `Badge Id to decline`  
 `jwt` string `jwt token obtained from BitClout identity that corresponds with publickey`  
 `publickey` string `Public key of issuer; note the lowercase k`  
-**_Response:_**
+**_Response:_**  
 
 > 200 (OK):
 
@@ -236,7 +236,7 @@ Declines a badge by removing it from badgesPending
 `GET` **Get Badge Page**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/badgePages/:id`  
 **_Request Params:_** `id` string `Badge Page ID`  
-**_Response:_**
+**_Response:_**  
 
 > 200 (OK):
 
@@ -256,7 +256,7 @@ Declines a badge by removing it from badgesPending
 
 `GET` **Get All Badge Pages**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/badgePages`  
-**_Response_**
+**_Response_**  
 
 > 200 (OK):
 
@@ -283,7 +283,7 @@ Deletes badge page (ad) and removes value from user badgesCreated array
 `id` string `ID of badge page to be deleted`  
 `publickey` string `Public key of issuer; note the lowercase k`  
 `jwt` string `jwt token obtained from BitClout identity that corresponds with publickey`  
-**_Response_**
+**_Response_**  
 
 > 200 (OK):
 
@@ -311,7 +311,7 @@ Adds a profile page at location pageNum and shifts all other pages greater or eq
 `pageNum` number `Display index location of page; think of pages like an array that starts at index 0`  
 `jwt` string `jwt token obtained from BitClout identity that corresponds with publickey`  
 `publickey` string `Public key of issuer; note the lowercase k`  
-**_Response_**
+**_Response_**  
 
 > 200 (OK):
 
@@ -325,12 +325,12 @@ Adds a profile page at location pageNum and shifts all other pages greater or eq
 
 `DELETE` **Delete Profile Page**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/users/portfolioPages`  
-Deletes a page from a user's portfolio
+Deletes a page from a user's portfolio  
 **_Request Body:_**  
 `pageNum` number `page location to be deleted`  
 `publickey` string `Public key of issuer; note the lowercase k`  
 `jwt` string `jwt token obtained from BitClout identity that corresponds with publickey`  
-**_Response_**
+**_Response_**  
 
 > 200 (OK):
 
