@@ -6,7 +6,7 @@ comments: false
 
 # Hero section
 title: Vision
-description: Information about ...
+description: This page outlines some of the current features we are currently working on and planning to work on in the near future!
 
 # Author box
 author:
