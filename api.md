@@ -136,3 +136,40 @@ Gets a user's profile data from the BitClout chain by specifying the public key.
     }
 }
 ```
+`Post` **Create Badge**  
+`https://us-central1-bitbadges.cloudfunctions.net/api/badges`  
+Creates a badge by uploading to IPFS, adding the hash id to respective user's badgesIssues and badgesReceived array in our database, and posts hash to [@BitBadgesHash](https://bitclout.com/u/BitBadgesHash). User must own 0.05 BitBadges coin to issue a badge.
+
+**Note that recipients array must be valid public keys (not usernames). Also, there is no check for validity within this method. If an element in recipient array is invalid, it will be stored in our database and on IPFS with that invalid key and will not show up on intended user's profile.**  
+
+***Request:***  
+`title` string `Badge title. Required.`  
+`validDateEnd` number `Required if validDates is true, number of seconds since UNIX epoch`  
+`validDateStart` number `Required if validDates is true, number of seconds since UNIX epoch`  
+`validDates` boolean `true if badge is to have start/end dates; false if badge is valid forever`  
+`description` string `Required but can be an empty string.`  
+`backgroundColor` string `Required but can be an empty string. Must be a valid HTML color name or hex value.`  
+`externalUrl` string `Required but can be an empty string`  
+`imageUrl` string `Required but can be an empty string`  
+`recipients` array `Public keys of recipients.`  
+`issuer` string `Required`  
+`jwt` string `jwt token obtained from BitClout identity that corresponds with publickey`  
+`publickey` string `Public key of issuer; note the lowercase k`  
+***Response***  
+> 200 (OK):
+```javascript
+{
+    backgroundColor: string, //Valid HTML color name or hex string
+    dateCreated: Number, //number of seconds since UNIX epoch
+    description: string,
+    externalUrl: string,
+    id: string, //IPFS hash
+    imageUrl: string,
+    issuer: string, //BitClout public key
+    recipient: string, //BitClout public key
+    title: string,
+    validDateEnd: Number, //number of seconds since UNIX epoch
+    validDateStart: Number, //number of seconds since UNIX epoch
+    validDates: boolean //true if start/end dates, false if not
+}
+```
