@@ -23,13 +23,15 @@ author:
     description: Author description
 
 # Grid navigation
+
+# Grid navigation
 grid_navigation:
     - title: About
       excerpt: BitBadges is an open source, community driven platform where BitClout users can issue NFT badges to other users!
       cta: Read more
       url: 'https://bitbadges.github.io/about'    
     - title: Vision
-      excerpt: This page outlines some of the current features we are currently working on and planning to work on in the near future!
+      excerpt: BitBadges is an open source, community driven platform where BitClout users can issue NFT badges to other users!
       cta: Read more
       url: 'https://bitbadges.github.io/vision'
     - title: Usecases
@@ -37,15 +39,15 @@ grid_navigation:
       cta: Read more
       url: 'https://bitbadges.github.io/usecases'
     - title: Database Schema
-      excerpt: There are three things stored in the BitBadges database: badges, badgePages, and users
+      excerpt: There are three things stored in the BitBadges database - badges, badgePages, and users
       cta: Read more
       url: 'https://bitbadges.github.io/database'
     - title: The Repositories
-      excerpt: Currently, we are working on cleaning up the codebase but here are links to the repositories
+      excerpt: Currently, we are working on cleaning up the codebase but here are links to the repositories 
       cta: Read more
-      url: 'https://bitbadges.github.io/codebase'
+      url: 'https://bitbadges.github.io/codebase'   
     - title: API Documentation
-      excerpt: Here you will find information about our API and the various get/post methods
+      excerpt: Here you will find information about the BitBadges API and the various get/post methods
       cta: Read more
-      url: 'https://bitbadges.github.io/api'
+      url: 'https://bitbadges.github.io/api'         
 ---
