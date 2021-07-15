@@ -20,8 +20,8 @@ author:
     title: About Author
     title_url: '#'
     external_url: true
-    description: What is BitBadges? Our project allows any BitClout user to associate with any other user(s) through a NFT that is linked to the recipient's public key (no selling it). So once you earn a badge, no one can take it way from you! DISCLAIMER - Please keep in mind, this isn't investment advice.
-
+    description: What is BitBadges? Our project allows any BitClout user to associate with any other user(s) through a NFT that is linked to the recipient's public key (no selling it). So once you earn a badge, no one can take it way from you!
+    
 # Grid navigation
 grid_navigation:
     - title: About
