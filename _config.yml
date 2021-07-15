@@ -3,7 +3,7 @@ doks:
     baseurl:
     color_theme: purple # Available themes: blue (default), green, purple, red and yellow
     header:
-        logo: /doks-theme/assets/images/layout/logo.png
+        logo:
             text: BitBadges
             image: true
         nav:
