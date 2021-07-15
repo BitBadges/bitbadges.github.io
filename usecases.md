@@ -6,7 +6,7 @@ comments: false
 
 # Hero section
 title: Usecases
-description: Information about ...
+description: Because you can create a badge for anything, there are infinitely many possible use cases for BitBadges!
 
 # Author box
 author:
