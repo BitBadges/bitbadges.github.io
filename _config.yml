@@ -24,7 +24,7 @@ doks:
             logo:
                 text: BitBadges
                 image:
-            copyright: Copyright &copy; 2021. - BitBadges <br>All rights reserved.
+            copyright: Copyright &copy; 2021. - BitBadges <br>All rights reserved. Disclaimer - Please keep in mind, this isn't investment advice. Everything is at your own risk. Consider this experimental.
         social_list:
             - network_name: facebook
               profile_url: 'https://www.facebook.com/hashtag/BitBadges'
