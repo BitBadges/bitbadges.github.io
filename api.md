@@ -140,14 +140,18 @@ Creates a badge by uploading to IPFS, adding the hash id to respective user's ba
 `validDateStart` number `Required if validDates is true, number of seconds since UNIX epoch`  
 `validDates` boolean `true if badge is to have start/end dates; false if badge is valid forever`  
 `description` string `Required but can be an empty string.`  
+
 `backgroundColor` string `Required but can be an empty string. Must be a valid HTML color name or hex value ('#FFFFFF' or 'red'). Defaults to black`  
+
 `externalUrl` string `Required but can be an empty string`  
 `imageUrl` string `Required but can be an empty string. Defaults to sample badge image`  
 `recipients` array `Public keys of recipients.`  
 `issuer` string `Required`  
 `jwt` string `jwt token obtained from BitClout identity that corresponds with publickey`  
-`publickey` string `Public key of issuer; note the lowercase k`  
+`publickey` string `Public key of issuer; note the lowercase k` 
+
 `signedTransactionHex` – string – `Required if twenty six or more recipients. Signed transaction hex of a send bitclout transaction from BitClout Identity that is sending at least 0.005 $CLOUT per recipient starting with the sixth one to the @BitBadges account on BitClout. See /getFeeTxn for more details on how to do this. Note: Hex must be already signed when inputted. For details on how to get it signed, visit the BitClout Identity API docs. We strongly recommend against using access level 4 for your app.`  
+
 `amountNanos` – number – `Required if twenty six or more recipients. Number of nanos in the transaction specified by the signedTransactionHex; 10^9 nanos equals one $CLOUT`  
 
 **_Response_**  
