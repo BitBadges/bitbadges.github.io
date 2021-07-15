@@ -136,6 +136,7 @@ Gets a user's profile data from the BitClout chain by specifying the public key.
     }
 }
 ```
+
 `Post` **Create Badge**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/badges`  
 Creates a badge by uploading to IPFS, adding the hash id to respective user's badgesIssues and badgesReceived array in our database, and posts hash to [@BitBadgesHash](https://bitclout.com/u/BitBadgesHash). User must own 0.05 BitBadges coin to issue a badge.
@@ -173,6 +174,7 @@ Creates a badge by uploading to IPFS, adding the hash id to respective user's ba
     validDates: boolean //true if start/end dates, false if not
 }
 ```
+
 `Delete` **Delete Badge Page (Ad)**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/badgePages/:id`  
 Deletes badge page (ad) and removes value from user badgesCreated array  
@@ -194,3 +196,27 @@ Deletes badge page (ad) and removes value from user badgesCreated array
 }
 ```
 
+`Post` **Create Profile Page**  
+`https://us-central1-bitbadges.cloudfunctions.net/api/users/portfolioPages`  
+Adds a profile page at location pageNum and shifts all other pages greater or equal up one location.  
+`description` string `description of current page; defaults to empty string if none provided`  
+`badges` array `String array with all badges to showcase on the profile page; must be valid badges received by user`  
+`pageTitle` string  
+`pageNum` number `Display index location of page; think of pages like an array that starts at index 0`  
+`jwt` string `jwt token obtained from BitClout identity that corresponds with publickey`  
+`publickey` string `Public key of issuer; note the lowercase k`  
+***Response***  
+> 200 (OK):
+```javascript
+{
+    pageTitle: string,
+    pageNum: Number,
+    badges: [string array]
+}
+```
+> 400 (Bad Request)
+```javascript
+{
+    general: "error message"
+}
+```
