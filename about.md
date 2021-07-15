@@ -6,7 +6,7 @@ comments: false
 
 # Hero section
 title: About
-description: Information about ...
+description: BitBadges is an open source, community driven platform where BitClout users can issue NFT badges to other users!
 
 # Author box
 author:
