@@ -5,7 +5,7 @@ doks:
     header:
         logo: /doks-theme/assets/images/layout/logo.png
             text: BitBadges
-            image:
+            image: true
         nav:
             - item_name: About
               item_url: 'https://bitbadges.github.io/about'
