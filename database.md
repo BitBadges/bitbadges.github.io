@@ -6,7 +6,7 @@ comments: false
 
 # Hero section
 title: Database Schema
-description: There are three things stored in the BitBadges database - badges, badgePages, and users
+description: There are three things currently stored in the BitBadges database - badges, badgePages, and users
 
 # Author box
 author:
@@ -35,14 +35,20 @@ There are three things stored in the BitBadges database: badges, badgePages, and
 **Badges**
 ```javascript
 {
+    attributes: string, //not currently implemented
     backgroundColor: string, //Valid HTML color name or hex string
+    category: string, //not currently implemented
+    collectionId: string, //not currently implemented
     dateCreated: Number, //number of seconds since UNIX epoch
     description: string,
     externalUrl: string,
     id: string, //IPFS hash
     imageUrl: string,
+    isVisible: true,
     issuer: string, //BitClout public key
+    issuerChain: string, //$CLOUT only for now
     recipients: string array, //BitClout public key
+    recipientsChains: string array, //["$CLOUT", ...] only for now
     title: string,
     validDateEnd: Number, //number of seconds since UNIX epoch
     validDateStart: Number, //number of seconds since UNIX epoch
@@ -66,8 +72,10 @@ There are three things stored in the BitBadges database: badges, badgePages, and
 **Users**
 ```javascript
 {
+    badgesAccepted: string array, //ids of badges accepted to show on profile
     badgesCreated: string array, //ids of badge pages or ads created
     badgesIssued: string array, //ids of badges given out
+    badgesPending: string array, //ids of badges pending to show on profile
     badgesReceived: string array, //ids of badges received
     portfolioPages: object array //page details for a user profile
 }

@@ -32,7 +32,7 @@ page_nav:
 Because you can create a badge for anything, there are infinitely many possible use cases for BitBadges!
 
 ## Potential Use Cases
-- **BitClout Official Badges** - Some official BitClout account can give out badges like a rug pulled badge that is displayed on your account if you pump and dump, verified badges, etc.
+- **BitClout Verification Badges** - Any BitClout account can give out verification badges and you can chooose which person/entity to get your verification ticks from.
 - **Memberships/Subscriptions/Access Tokens** - Badges have optional start and end dates, so you can offer a limited time membership for anything from a gym membership to a Spotify subscription. Proof of ownership is easily done through our public API.
 - **Premium Content** - Any creator who wishes to offer premium content can do so through badges.
 - **Recognition of Achievement or Completion** - Job certifications, awards, athletic accomplishments, etc.
