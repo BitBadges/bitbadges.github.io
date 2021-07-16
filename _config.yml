@@ -4,8 +4,8 @@ doks:
     color_theme: purple # Available themes: blue (default), green, purple, red and yellow
     header:
         logo:
-            text:
-            image: true
+            text: BitBadges
+            image:
         nav:
             - item_name: About
               item_url: 'https://bitbadges.github.io/about'
