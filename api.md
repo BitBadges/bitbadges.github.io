@@ -35,7 +35,7 @@ page_nav:
 Gets all user's data
 
 > **_Request Params:_**  
-`id` string `User's BitClout Public Key`  
+`id` string `User's BitClout public key (no usernames, please convert first using BitClout API)`  
 **_Response:_**  
 
 > 200 (OK):
@@ -57,11 +57,6 @@ Gets all user's data
     ]
 }
 ```
-
-**Get All Badges**  
-All badge hashes are posted on the [@BitBadgesHash](https://bitclout.com/u/BitBadgesHash) account, so you will interact w/ the BitClout backend API to get the full list of hashes.
-
-_Note:_ All badges are permanent and won't change, so consider caching or storing them locally instead of adding stress to our API and database.
 
 `GET` **Get Badge**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/badge/:id`  
@@ -127,6 +122,11 @@ Gets all data for badges specified
     ]
 }
 ```
+
+`GET` **Get All Badges**  
+All badge hashes are posted on the [@BitBadgesHash](https://bitclout.com/u/BitBadgesHash) account, so please interact w/ the BitClout backend API to see the full list of hashes.
+
+_Note:_ All badges are permanent and won't change, so consider caching or storing them locally instead of adding stress to our API and database.
 
 `POST` **Create Badge**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/badge`  
