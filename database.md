@@ -59,9 +59,11 @@ There are three things stored in the BitBadges database: badges, badgePages, and
 ```javascript
 {
     backgroundColor: string, //Valid HTML color name or hex string
+    category: string, //is blank for now, not implemented yet
+    dateCreated: number, 
     description: string,
     externalUrl: string,
-    id: string, //IPFS hash
+    id: string, //hash of id in our DB
     imageUrl: string,
     issuer: string, //BitClout public key
     title: string,
@@ -73,19 +75,27 @@ There are three things stored in the BitBadges database: badges, badgePages, and
 ```javascript
 {
     badgesAccepted: string array, //ids of badges accepted to show on profile
-    badgesCreated: string array, //ids of badge pages or ads created
+    badgesListed: string array, //ids of badges listed for offer
     badgesIssued: string array, //ids of badges given out
     badgesPending: string array, //ids of badges pending to show on profile
     badgesReceived: string array, //ids of badges received
-    portfolioPages: object array //page details for a user profile
+    issuedCollections: string array, //collections made up of your issued badges
+    receivedCollections: string array, //collections made up of user's received badges
 }
+
 ```
-*Portfolio page object:*
+*Collection object:*
 ```javascript
 {
+    backgroundColor: string,
     badges: string array, //ids of badges on the given page
-    pageTitle: string,
-    pageNum: Number, //display index of page (starts at location 0),
-    description: string
+    dateCreated: number,
+    description: string,
+    imageUrl: string,
+    isVisible: boolean, //always true for now
+    issuers: string array, //array of all public keys in DB
+    name: string,
+    receivedColelction: boolean, //true if made up of received badges, false if issued badges
+    recipients: string array //array of all public keys in DB
 }
 ```

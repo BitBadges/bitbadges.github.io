@@ -44,17 +44,11 @@ Gets all user's data
 {
     badgesIssued: [string],
     badgesReceived: [string],
-    badgesCreated: [string],
+    badgesListed: [string],
     badgesAccepted: [string],
     badgesPending: [string],
-    portfolioPages: [
-        {
-            pageNum: Number,
-            pageTitle: string,
-            badges: [string],
-            description: string
-        }
-    ]
+    issuedCollections: [string],
+    receivedCollections: [string]
 }
 ```
 
@@ -254,14 +248,26 @@ Declines a badge by removing it from badgesPending
 }
 ```
 
-`GET` **Get All Badge Pages**  
+`POST` **Create a Listed Badge**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/badgePages`  
+**_Request Body:_**  
+`backgroundColor`: string, //Valid HTML color name or hex string
+`description`: string,
+`externalUrl`: string,
+`imageUrl`: string,
+`issuer`: string, //BitClout public key
+`title`: string,
+`preReqs`: string, //what it takes to earn the badge
+`validity`: string, //explain how long the badge lasts
+`publickey` string `Public key of issuer; note the lowercase k`  
+`jwt` string `jwt token obtained from BitClout identity that corresponds with publickey`  
+
 **_Response_**  
 
 > 200 (OK):
 
 ```javascript
-[
+{
   {
     backgroundColor: string, //Valid HTML color name or hex string
     description: string,
@@ -273,14 +279,39 @@ Declines a badge by removing it from badgesPending
     preReqs: string, //what it takes to earn the badge
     validity: string, //explain how long the badge lasts
   },
-];
+}
 ```
 
-`DELETE` **Delete Badge Page (Ad)**  
+`GET` **Get All User Badge Pages**  
+`https://us-central1-bitbadges.cloudfunctions.net/api/userBadgePages/:userId`  
+**_Request Params:_** `userId` string `User Public Key`  
+**_Response_**  
+
+> 200 (OK):
+
+```javascript
+{
+  badgePages: [
+    {
+      backgroundColor: string, //Valid HTML color name or hex string
+      description: string,
+      externalUrl: string,
+      id: string, //IPFS hash
+      imageUrl: string,
+      issuer: string, //BitClout public key
+      title: string,
+      preReqs: string, //what it takes to earn the badge
+      validity: string, //explain how long the badge lasts
+    },
+  ];
+}
+```
+
+`DELETE` **Delete Listed Badge for Offer**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/badgePages/:id`  
-Deletes badge page (ad) and removes value from user badgesCreated array  
+Deletes a listed badge and removes value from user badgesListed array  
 **_Request Body:_**  
-`id` string `ID of badge page to be deleted`  
+`id` string `ID of listed badge to be deleted`  
 `publickey` string `Public key of issuer; note the lowercase k`  
 `jwt` string `jwt token obtained from BitClout identity that corresponds with publickey`  
 **_Response_**  
@@ -293,22 +324,66 @@ Deletes badge page (ad) and removes value from user badgesCreated array
 }
 ```
 
-> 400 (Bad Request)
+`GET` **Get Collection**  
+`https://us-central1-bitbadges.cloudfunctions.net/api/collections/:userId/:name`  
+**_Request Params:_** `userId` string `User Public Key`  
+`name` string `Collection name you wish to get`
+**_Response_**  
+
+> 200 (OK):
 
 ```javascript
 {
-  general: 'Error message';
-}
+  backgroundColor: string,
+  badges: string array, //ids of badges on the given page
+  dateCreated: number,
+  description: string,
+  imageUrl: string,
+  isVisible: boolean, //always true for now
+  issuers: string array, //array of all public keys in DB
+  name: string,
+  receivedColelction: boolean, //true if made up of received badges, false if issued badges
+  recipients: string array //array of all public keys in DB
+};
 ```
 
-`POST` **Create Profile Page**  
-`https://us-central1-bitbadges.cloudfunctions.net/api/users/portfolioPages`  
-Adds a profile page at location pageNum and shifts all other pages greater or equal up one location.  
+
+`GET` **Get All Collections for a User**  
+`https://us-central1-bitbadges.cloudfunctions.net/api/collections/:userId`  
+**_Request Params:_** `userId` string `User Public Key`  
+**_Response_**  
+
+> 200 (OK):
+
+```javascript
+{
+  collections: [
+    {
+      backgroundColor: string,
+      badges: string array, //ids of badges on the given page
+      dateCreated: number,
+      description: string,
+      imageUrl: string,
+      isVisible: boolean, //always true for now
+      issuers: string array, //array of all public keys in DB
+      name: string,
+      receivedColelction: boolean, //true if made up of received badges, false if issued badges
+      recipients: string array //array of all public keys in DB
+    }
+  ]
+};
+```
+
+
+`POST` **Create Collection**  
+`https://us-central1-bitbadges.cloudfunctions.net/api/users/createCollection`  
+Creates a collection for a user. If receivedCollection is true, it is a collection of received badges. If not, a collection of issued badges instead. Name must be unique from other collections a user creates.  
 **_Request Body:_**  
 `description` string `description of current page; defaults to empty string if none provided`  
 `badges` array `String array with all badges to showcase on the profile page; must be valid badges received by user`  
-`pageTitle` string  
-`pageNum` number `Display index location of page; think of pages like an array that starts at index 0`  
+`name` string  
+`receivedCollection` boolean  
+`imageUrl` string  
 `jwt` string `jwt token obtained from BitClout identity that corresponds with publickey`  
 `publickey` string `Public key of issuer; note the lowercase k`  
 **_Response_**  
@@ -317,17 +392,24 @@ Adds a profile page at location pageNum and shifts all other pages greater or eq
 
 ```javascript
 {
-    pageTitle: string,
-    pageNum: Number,
-    badges: [string array]
+    backgroundColor: string,
+    badges: string array, //ids of badges on the given page
+    dateCreated: number,
+    description: string,
+    imageUrl: string,
+    isVisible: boolean, //always true for now
+    issuers: string array, //array of all public keys in DB
+    name: string,
+    receivedColelction: boolean, //true if made up of received badges, false if issued badges
+    recipients: string array //array of all public keys in DB
 }
 ```
 
-`DELETE` **Delete Profile Page**  
-`https://us-central1-bitbadges.cloudfunctions.net/api/users/portfolioPages`  
-Deletes a page from a user's portfolio  
+`DELETE` **Delete Collection**  
+`https://us-central1-bitbadges.cloudfunctions.net/api/users/deleteCollection`  
+Deletes a collection according to name specified
 **_Request Body:_**  
-`pageNum` number `page location to be deleted`  
+`name` string `name of collection to be deleted`
 `publickey` string `Public key of issuer; note the lowercase k`  
 `jwt` string `jwt token obtained from BitClout identity that corresponds with publickey`  
 **_Response_**  
