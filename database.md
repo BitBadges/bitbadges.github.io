@@ -31,7 +31,6 @@ page_nav:
 # Database Schema
 There are three things stored in the BitBadges database: badges, badgePages, and users
 
-## Database Schema
 **Badges**
 ```javascript
 {
