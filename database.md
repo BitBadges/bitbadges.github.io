@@ -91,7 +91,7 @@ Users - Users profiles store data about what badges they have issued, received, 
 }
 
 ```
-*Collection object:*
+**Collections**
 ```javascript
 {
     backgroundColor: string, //valid HTML color names
