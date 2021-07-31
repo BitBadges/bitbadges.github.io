@@ -237,6 +237,46 @@ Declines a badge from your pending badges
 }
 ```
 
+
+`POST` **Remove Badge From Issued (hides it from Being Shown on Issued)**  
+`https://us-central1-bitbadges.cloudfunctions.net/api/acceptBadge`  
+Removes the badge from your badgesIssued array and moves it to a new array called badgesRemovedFromIssued  
+Badge can't be removed from blockchain but now shouldn't be displayed next to your profiles on frontends like CloutFeed.  
+Once you remove this, there is no way currently to unremove it.  
+
+**_Request Body:_**  
+`badgeId` string `Badge Id to remove`  
+`jwt` string `jwt token obtained from BitClout identity that corresponds with publickey`  
+`publickey` string `Public key of issuer; note the lowercase k`  
+**_Response:_**  
+
+> 200 (OK):
+
+```javascript
+{
+  general: string; //success message
+}
+```
+
+`POST` **Remove Badge From Accepted (Hide from Being Shown on Received)**  
+`https://us-central1-bitbadges.cloudfunctions.net/api/hideAcceptedBadge`  
+Removes a badge from your badgesAccepted array. Badge is still on blockchain but shouldn't be displayed next to your profiles on frontends like CloutFeed.  
+Once you remove this, there is no way currently to unremove it.  
+
+**_Request Body:_**  
+`badgeId` string `Badge Id to remove from accepted`  
+`jwt` string `jwt token obtained from BitClout identity that corresponds with publickey`  
+`publickey` string `Public key of issuer; note the lowercase k`  
+**_Response:_**  
+
+> 200 (OK):
+
+```javascript
+{
+  general: string; //success message
+}
+```
+
 `GET` **Get Listed Badge**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/badgePages/:id`  
 Gets a listed badge according to a specified ID. Listed badges are advertisements showing off what badges you are offering.  
