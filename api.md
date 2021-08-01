@@ -124,8 +124,6 @@ All badge hashes are posted on the [@BitBadgesHash](https://bitclout.com/u/BitBa
 
 _Note:_ All badges are permanent and won't change, so consider caching or storing them locally instead of adding stress to our API and database.
 
-# Listing Badges
-
 `POST` **Create Badge**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/badge`  
 Creates a badge by uploading data to IPFS, adding the hash id to respective user's badgesIssued and badgesPending array in our database, and posts hash to [@BitBadgesHash](https://bitclout.com/u/BitBadgesHash). First 25 recipients are free. After that it costs 0.005 $CLOUT per recipient (subject to change).  
@@ -303,6 +301,8 @@ Once you remove this, there is no way currently to unremove it.
 }
 ```
 
+# Listed Badges (Ads)
+
 `GET` **Get Listed Badge**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/badgePages/:id`  
 Gets a listed badge according to a specified ID. Listed badges are advertisements showing off what badges you are offering.  
@@ -417,7 +417,7 @@ Deletes a listed badge (removes it from being offered)
 }
 ```
 
-# Collection Methods
+# Collections
 
 `GET` **Get Collection**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/collections/:userId/:name`  
