@@ -308,16 +308,19 @@ Gets a listed badge according to a specified ID. Listed badges are advertisement
 Creates a listed badge. Listed badges are advertisements showing off what badges you are offering.  
 
 **_Request Body:_**  
-`backgroundColor`: string `Required but can be an empty string. Must be a valid HTML color name or hex value ('#FFFFFF' or 'red'). Defaults to black.`  
-`description`: string `Required but can be an empty string.`  
-`externalUrl`: string `Required but can be an empty string. Must be in valid URL format.`  
-`imageUrl`: string `Required but can be an empty string. Defaults to sample badge image`  
-`issuer`: string `Required. BitClout public key. Should match publickey field`  
-`title`: string `Badge title. Required. Must not be empty.`  
-`preReqs`: string `Explain what it takes to earn the badge`  
-`validity`: string `Explain how long the badge lasts`  
-`publickey` string `Public key of issuer; note the lowercase k`   
-`jwt` string `jwt token obtained from BitClout identity that corresponds with publickey`  
+```javascript
+{
+    backgroundColor: string, // Required but can be an empty string. Must be a valid HTML color name or hex value ('#FFFFFF' or 'red'). Defaults to black.
+    description: string, // Required but can be an empty string.
+    externalUrl: string, // Required but can be an empty string. Must be in valid URL format.
+    imageUrl: string, // Required but can be an empty string. Defaults to sample badge image
+    issuer: string, // Required. BitClout public key. Should match publickey field
+    title: string, // Badge title. Required. Must not be empty.
+    preReqs: string, // Explain what it takes to earn the badge
+    validity: string, // Explain how long the badge lasts
+    publickey: string // Public key of issuer; note the lowercase k
+    jwt: string // jwt token obtained from BitClout identity that corresponds with publickey
+```
 
 **_Response_**  
 
