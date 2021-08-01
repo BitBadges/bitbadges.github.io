@@ -28,7 +28,7 @@ page_nav:
     url: 'https://bitbadges.github.io'
 ---
 
-# API Documentation
+# Users
 
 `GET` **Get User**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/users/:id`  
@@ -51,6 +51,8 @@ Gets all user's data
     receivedCollections: [string]
 }
 ```
+
+# Badges
 
 `GET` **Get Badge**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/badge/:id`  
@@ -121,6 +123,8 @@ Gets badge data for all badge IDs specified
 All badge hashes are posted on the [@BitBadgesHash](https://bitclout.com/u/BitBadgesHash) account, so please interact w/ the BitClout backend API to see the full list of hashes.
 
 _Note:_ All badges are permanent and won't change, so consider caching or storing them locally instead of adding stress to our API and database.
+
+# Listing Badges
 
 `POST` **Create Badge**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/badge`  
@@ -412,6 +416,8 @@ Deletes a listed badge (removes it from being offered)
   general: 'Success message';
 }
 ```
+
+# Collections
 
 `GET` **Get Collection**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/collections/:userId/:name`  
