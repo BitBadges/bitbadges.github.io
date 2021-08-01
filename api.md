@@ -208,9 +208,13 @@ Note that this is not needed for badges with under twenty five recipients.
 Accepts a badges from your pending and moves it t your accepted badges  
 
 **_Request Body:_**  
-`badgeId` string `Badge Id to accept`  
-`jwt` string `jwt token obtained from BitClout identity that corresponds with publickey`  
-`publickey` string `Public key of issuer; note the lowercase k`  
+```javascript
+{
+    badgeId: string, // Badge Id to accept
+    jwt: string, // jwt token obtained from BitClout identity that corresponds with publickey
+    publickey: string // public key of issuer; note the lowercase k
+}    
+```   
 **_Response:_**  
 
 > 200 (OK):
@@ -320,6 +324,7 @@ Creates a listed badge. Listed badges are advertisements showing off what badges
     validity: string, // Explain how long the badge lasts
     publickey: string // Public key of issuer; note the lowercase k
     jwt: string // jwt token obtained from BitClout identity that corresponds with publickey
+}    
 ```
 
 **_Response_**  
@@ -456,6 +461,7 @@ Creates a collection for a user. If receivedCollection is true, it is a collecti
    imageUrl: string, // Required but can be an empty string. Defaults to sample badge image
    jwt: string, // jwt token obtained from BitClout identity that corresponds with publickey
    publickey: string // Public key of issuer; note the lowercase k
+}   
 ```
 **_Response_**  
 
