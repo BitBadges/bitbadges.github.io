@@ -189,8 +189,12 @@ Once you obtain TransactionHex from this transaction, you must get it signed usi
 Note that this is not needed for badges with under twenty five recipients.
 
 **_Request Params:_**  
-`senderKey`: string - `public key of account that is sending the $CLOUT to @BitBadges`  
-`numRecipients`: string – `number of recipients of badge to be issued`  
+```javascript
+{
+    senderKey: string, // public key of account that is sending the $CLOUT to @BitBadges
+    numRecipients: string // number of recipients of badge to be issued
+}
+```
 
 **_Response:_**  
 
