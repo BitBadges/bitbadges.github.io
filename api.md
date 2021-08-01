@@ -510,9 +510,13 @@ Creates a collection for a user. If receivedCollection is true, it is a collecti
 `https://us-central1-bitbadges.cloudfunctions.net/api/users/deleteCollection`  
 Deletes a collection for a user.  
 **_Request Body:_**  
-`name` string `name of collection to be deleted`  
-`publickey` string `Public key of issuer; note the lowercase k`  
-`jwt` string `jwt token obtained from BitClout identity that corresponds with publickey`  
+```javascript
+{
+    name: string, // name of collection to be deleted
+    publickey: string, // Public key of issuer; note the lowercase k
+    jwt: string // jwt token obtained from BitClout identity that corresponds with publickey
+}
+```  
 **_Response_**  
 
 > 200 (OK):
