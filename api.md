@@ -417,7 +417,7 @@ Deletes a listed badge (removes it from being offered)
 }
 ```
 
-# Collections
+# Collection Methods
 
 `GET` **Get Collection**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/collections/:userId/:name`  
