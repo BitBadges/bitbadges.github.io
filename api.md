@@ -85,7 +85,7 @@ Gets badge data for a specific badge ID
 
 `POST` **Get Badges**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/badges`  
-Gets badge data for all badge IDs specified
+Gets badge data for all badge IDs specified  
 **_Request Body:_**  
 `badgeIds` string[] `Array of badge ids to get`  
 **_Response:_**  
@@ -373,7 +373,7 @@ Gets all listed badges a user is offering. Listed badges are advertisements show
 
 `DELETE` **Delete Listed Badge for Offer**  
 `https://us-central1-bitbadges.cloudfunctions.net/api/badgePages/:id`  
-Deletes a listed badge (removes it from being offered)
+Deletes a listed badge (removes it from being offered)  
 **_Request Body:_**  
 `id` string `ID of listed badge to be deleted`  
 `publickey` string `Public key of issuer; note the lowercase k`  
@@ -447,13 +447,16 @@ Gets all details about all collections for a specified user.
 `https://us-central1-bitbadges.cloudfunctions.net/api/users/createCollection`  
 Creates a collection for a user. If receivedCollection is true, it is a collection made up of received badges. If not, it is a collection of issued badges instead. Name must be unique from other collections a user creates.  
 **_Request Body:_**  
-`description` string `Required. Description of current page. Can be empty`  
-`badges` string[] `String array with all badge ids to showcase on the profile page; must be valid badges`  
-`name` string  `Required. Must be unique from other collections for a user`  
-`receivedCollection` boolean  `Required. true if you would like to create a collection from your received badges, false for issued badges`  
-`imageUrl` string  `Required but can be an empty string. Defaults to sample badge image`  
-`jwt` string `jwt token obtained from BitClout identity that corresponds with publickey`  
-`publickey` string `Public key of issuer; note the lowercase k`  
+```javascript
+{
+   description: string, // Required. Description of current page. Can be empty
+   badges: string[], // String array with all badge ids to showcase on the profile page; must be valid badges
+   name: string, // Required. Must be unique from other collections for a user
+   receivedCollection: boolean // Required. true if you would like to create a collection from your received badges, false for issued badges
+   imageUrl: string, // Required but can be an empty string. Defaults to sample badge image
+   jwt: string, // jwt token obtained from BitClout identity that corresponds with publickey
+   publickey: string // Public key of issuer; note the lowercase k
+```
 **_Response_**  
 
 > 200 (OK):
