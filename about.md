@@ -37,6 +37,7 @@ URL: [bitbadges.web.app](https://bitbadges.web.app/)
 
 ## Laying the Foundation
 We aim to provide the foundation upon which any developer can build any innovation they wish. Like BitClout laid the foundation by providing public access to data like posts, messages, transactions, etc, BitBadges lays the foundation by providing public access to badges. We offer a public API with access to all data for all badges so anyone can build whatever they wish on top of our ecosystem.
+
 We are a completely open source and community driven project. Those who contribute and innovate within our ecosystem will be rewarded with the official BitBadges account creator coins.
 
 Join the discord at: [discord.gg/TJMaEd9bar](discord.gg/TJMaEd9bar)
@@ -44,7 +45,7 @@ Join the discord at: [discord.gg/TJMaEd9bar](discord.gg/TJMaEd9bar)
 ## Badges
 There are three main parts to BitBadges: issuing badges to others, advertising your badges, and showcasing the badges you have earned!
 
-**Issuing Badges:** Badges can be issued by any user to any other user, but once a badge is issued, it is permanently on the blockchain and can't be changed. To be displayed on the recipient's profile, the recipient must accept/reject it. But even if they reject it, the badge is already issued and on the blockchain. This allows bad badges ike scammer badges to be issued. Badges are customizable, so you can issue a badge for anything from a gym membership to a college diploma to a store receipt. Customization options include background colors, start/end dates, image URLs, and much more. Badges are non-transferrable and will forever be linked to a public key once they are issued. 
+**Issuing Badges:** Badges can be issued by any user to any other user, but once a badge is issued, it is permanently on the blockchain and can't be changed. To be displayed on the recipient's profile, the recipient must accept/reject it. But even if they reject it, the badge is already issued and on the blockchain. This allows bad badges like scammer badges to be issued. Badges are customizable, so you can issue a badge for anything from a gym membership to a college diploma to a store receipt. Customization options include background colors, start/end dates, image URLs, and much more. Badges are non-transferrable and will forever be linked to a public key once they are issued. 
 
 **Advertising Your Badges:** If you want to offer your badge to others, create an advertisement for your badge on the BitBadge website! This advertisement should explain how the users can earn your badge and details about the badge. Some potential advertisers include professors trying to sell their course, content creators selling access to premium content, and much more!
 
