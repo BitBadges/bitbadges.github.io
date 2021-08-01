@@ -234,9 +234,13 @@ Accepts a badges from your pending and moves it t your accepted badges
 Declines a badge from your pending badges  
 
 **_Request Body:_**  
-`badgeId` string `Badge Id to decline`  
-`jwt` string `jwt token obtained from BitClout identity that corresponds with publickey`  
-`publickey` string `Public key of issuer; note the lowercase k`  
+```javascript
+{
+    badgeId: string, // Badge Id to decline
+    jwt: string, // jwt token obtained from BitClout identity that corresponds with publickey
+    publickey: string // Public key of issuer; note the lowercase k
+}
+```  
 **_Response:_**  
 
 > 200 (OK):
@@ -255,9 +259,12 @@ Badge can't be removed from blockchain but now shouldn't be displayed next to yo
 Once you remove this, there is no way currently to unremove it.  
 
 **_Request Body:_**  
-`badgeId` string `Badge Id to remove`  
-`jwt` string `jwt token obtained from BitClout identity that corresponds with publickey`  
-`publickey` string `Public key of issuer; note the lowercase k`  
+```javascript
+{
+    badgeId: string, // Badge Id to remove
+    jwt: string, // jwt token obtained from BitClout identity that corresponds with publickey
+    publickey: string // Public key of issuer; note the lowercase k
+```  
 **_Response:_**  
 
 > 200 (OK):
