@@ -396,9 +396,13 @@ Gets all listed badges a user is offering. Listed badges are advertisements show
 `https://us-central1-bitbadges.cloudfunctions.net/api/badgePages/:id`  
 Deletes a listed badge (removes it from being offered)  
 **_Request Body:_**  
-`id` string `ID of listed badge to be deleted`  
-`publickey` string `Public key of issuer; note the lowercase k`  
-`jwt` string `jwt token obtained from BitClout identity that corresponds with publickey`  
+```javascript
+{
+    id: string, // ID of listed badge to be deleted
+    publickey: string, // Public key of issuer; note the lowercase k
+    jwt: string // jwt token obtained from BitClout identity that corresponds with publickey
+}
+```  
 **_Response_**  
 
 > 200 (OK):
