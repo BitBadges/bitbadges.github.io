@@ -31,13 +31,10 @@ page_nav:
 # Database Schema
 There are four things stored in the BitBadges database: badges, badgePages, collections, and users.  
 
-Badges - Badges are non transferable NFTs. Badges store all metadata about each NFT.  
-
-Listed Badges (badgePages) - Listed badges are advertisements to show off the badges you are offering.  
-
-Collections - Users can group together badges they have either issued or received into a collection.  
-
-Users - Users profiles store data about what badges they have issued, received, pending, and the collections they create.  
+**Badges:** Badges are non transferable NFTs. Badges store all metadata about each NFT.  
+**Listed Badges (badgePages):** Listed badges are advertisements to show off the badges you are offering.  
+**Collections:** Users can group together badges they have either issued or received into a collection.  
+**Users:** Users profiles store data about what badges they have issued, received, pending, and the collections they create.  
 
 **Badges**
 ```javascript
