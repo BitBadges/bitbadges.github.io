@@ -37,7 +37,7 @@ Because you can create a badge for anything, there are infinitely many possible 
 - **Premium Content** - Any creator who wishes to offer premium content can do so through badges.
 - **Recognition of Achievement or Completion** - Job certifications, awards, athletic accomplishments, etc.
 - **Peer to Peer University** - Professors can offer their courses directly peer to peer with any method of their choosing and offer a certificate of completion badge. This way, teachers can finally get the compensation they deserve as they can directly benefit from the monetization of BitClout.
-- **Government Issued Tokens** - Trusted centralized parties like the government can issue badges for anything like vaccinations or felonies.
 - **University Diplomas** - Universities can offer diplomas to students as a badge.
 - **Publications** - Verify you are the author of a publication
+- **Real Estate** - Custom encrypted title ownership, HOAs, and even MLS documents registered through the blockchain
 - **Smart contracts** may eventually be used to issue badges which eliminates the need for trust between a creator and an individual.
