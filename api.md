@@ -264,6 +264,7 @@ Once you remove this, there is no way currently to unremove it.
     badgeId: string, // Badge Id to remove
     jwt: string, // jwt token obtained from BitClout identity that corresponds with publickey
     publickey: string // Public key of issuer; note the lowercase k
+}
 ```  
 **_Response:_**  
 
@@ -281,9 +282,13 @@ Removes a badge from your badgesAccepted array. Badge is still on blockchain but
 Once you remove this, there is no way currently to unremove it.  
 
 **_Request Body:_**  
-`badgeId` string `Badge Id to remove from accepted`  
-`jwt` string `jwt token obtained from BitClout identity that corresponds with publickey`  
-`publickey` string `Public key of issuer; note the lowercase k`  
+```javascript
+{
+    badgeId: string, // Badge Id to remove from accepted
+    jwt: string, // jwt token obtained from BitClout identity that corresponds with publickey
+    publickey: string // Public key of issuer; note the lowercase k
+}
+```  
 **_Response:_**  
 
 > 200 (OK):
