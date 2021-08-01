@@ -34,10 +34,10 @@ page_nav:
 `https://us-central1-bitbadges.cloudfunctions.net/api/users/:id`  
 Gets all user's data
 
-> **_Request Params:_**  
-`id` string `User's BitClout public key (no usernames, please convert first using BitClout API)`  
-**_Response:_**  
+**_Request Params:_**  
+`id` string `User's BitClout public key` *(no usernames, please first convert using BitClout's API)*  
 
+**_Response:_**  
 > 200 (OK):
 
 ```javascript
@@ -417,8 +417,12 @@ Deletes a listed badge (removes it from being offered)
 `https://us-central1-bitbadges.cloudfunctions.net/api/collections/:userId/:name`  
 Gets all details about a specified collection.  
 **_Request Params:_**  
-`userId` string `User Public Key`  
-`name` string `Collection name you wish to get`  
+```javascript
+{
+    userId: string, // User Public Key
+    name: string // Collection name you wish to get
+}
+```  
 **_Response_**  
 
 > 200 (OK):
