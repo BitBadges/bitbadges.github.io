@@ -55,7 +55,7 @@ There are four things stored in the BitBadges database: badges, badgePages, coll
     recipientsChains: string array, //["$CLOUT", ...] only for now
     title: string, 
     validDateEnd: Number, //number of milliseconds since UNIX epoch
-    validDateStart: Number, //number of miliseconds since UNIX epoch
+    validDateStart: Number, //number of milliseconds since UNIX epoch
     validDates: boolean //true if badge has start/end dates, false if valid forever
 }
 ```
