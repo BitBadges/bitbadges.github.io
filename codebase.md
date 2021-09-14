@@ -42,3 +42,5 @@ Currently, we are working on cleaning up the codebase but here are links to the 
 [/for-creators](https://bitbadges.github.io/for-creators/)  
 [/for-educators](https://bitbadges.github.io/for-educators/)  
 [/for-real-estate](https://bitbadges.github.io/for-real-estate/)
+
+**Whitepaper:** [https://eprint.iacr.org/2021/1186](https://eprint.iacr.org/2021/1186)
