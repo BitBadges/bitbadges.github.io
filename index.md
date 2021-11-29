@@ -25,7 +25,7 @@ author:
 # Grid navigation
 grid_navigation:
     - title: About
-      excerpt: BitBadges is an open source, community driven platform where BitClout users can issue NFT badges to other users!
+      excerpt: BitBadges is an open source, community driven platform where different users can issue NFT badges to other users!
       cta: Read more
       url: 'https://bitbadges.github.io/about'    
     - title: Vision
