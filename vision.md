@@ -41,10 +41,9 @@ This project is open source, so if you would like to help with any of the featur
 - Profile customization where you can show off your best badges along with advertise ones you are offering
 
 ## Plans for the Future
+- Gamified e-learning solutions
+- BitBadges 2.0 launch and specification
 - More support for hosting content within the BitBadges website
     - Ex: Having BitBadges as the place where you actually host your course instead of hosting it externally
-    - Potentially partner with other BitClout projects working with premium content
-- Explore possibilities of getting badges integrated on the BitClout chain itself instead of using [@BitBadgesHash](https://bitclout.com/u/BitBadgesHash) and posting the hashes
-    - Can be stored just how a post or a message would be with a sender, recipient, image, description, etc
-- Payment options and auctions to allow creators to sell their badges for BitClout or other currencies
+    - Potentially partner with other projects working on premium content
 - Possible integration with [@CloutContracts](https://cloutcontracts.net/) as an interoperable sidechain for badge issuing.

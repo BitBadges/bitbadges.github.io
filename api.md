@@ -28,6 +28,8 @@ page_nav:
     url: 'https://bitbadges.github.io'
 ---
 
+**This is for BitBadges 1.0 which utilizes BitClout. BitBadges 2.0's release will be independent and truly decentralized, therefore 1.0's API version is more depreciated (but still active).**
+
 # Users
 
 `GET` **Get User**  
