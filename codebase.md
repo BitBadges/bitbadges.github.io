@@ -43,4 +43,6 @@ Currently, we are working on cleaning up the codebase but here are links to the 
 [/for-educators](https://bitbadges.github.io/for-educators/)  
 [/for-real-estate](https://bitbadges.github.io/for-real-estate/)
 
+[The Decentralized University](http://decentralizeduniversity.org/)
+
 **Whitepaper:** [https://eprint.iacr.org/2021/1186](https://eprint.iacr.org/2021/1186)
